@@ -1,0 +1,50 @@
+
+<div class="container">
+	<div id="title">
+		<center>
+			<b><header>HR Management System</header></b>
+		</center>
+	</div>
+
+	<div id="back">
+		<%= link_to "Back", home_index_path(), class: 'back_button' %>
+	</div>
+
+	<div>
+		<div id="content">
+			<center>
+				<%= form_tag("/employee_salaries", method: "get") do %>
+				<div>	  
+				  <%= text_field_tag(:id, "", class: 'input form-control', :placeholder => "Enter employee Id") %>
+				  
+				  <%= select_tag("month", options_for_select([["January","Jan"],["February","Feb"],["March","Mar"],["April","Apr"],["May","May"],["June","Jun"],["July","Jul"],["August","Aug"],["September","Sep"],["October","Oct"],["November","Nov"],["December","Dec"]],params[:per_page].to_s),{:name => "month" , class: "month"} ) %>
+				</div>
+				<div>
+		  			<%= submit_tag("Get", class: 'get_button')  %>
+				</div>
+				<% end %>
+			</center>
+		</div>
+
+		<% if @salaries.count>0 %>
+		<center>
+			<div id="result">
+				<table class="table table-bordered">
+				  <tr>
+				  	<th>Id</th>
+				    <th>Name</th>
+				    <th>Salary</th>
+				  </tr>
+				  <% @salaries.each_with_index do |employee,index| %>
+				  <tr>
+				  	<td><%= index+1 %></td>
+				    <td><%= employee["ename"] %></td>
+				    <td><%= employee["salary"] %></td>
+				  </tr>
+				 <% end %>
+				</table>
+			</div>
+		</center>
+		<% end %>
+	</div>
+</div>

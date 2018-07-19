@@ -1,0 +1,2 @@
+module EmployeeSalariesHelper
+end

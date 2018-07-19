@@ -1,0 +1,63 @@
+
+<div class="container">
+	<div id="title">
+	  <center>
+	    <b><header>HR Management System</header></b>
+	  </center>
+	</div>
+	<br>
+	<div>
+		<center><h4>Low performers with high salary.</h4></center>
+	</div>
+	<div id="back">
+	  <%= link_to "Back", home_index_path(), class: 'back_button' %>
+	</div>
+
+	<div id="content">
+		<center>
+		<%= form_tag("/low_performance_high_salaries", method: "get") do %>
+			<div>
+			  <%= text_field_tag(:salary, "", class: "input form-control", :placeholder => "Enter minimum salary") %>
+			</div>
+			<div>
+			  <%= submit_tag("Get", class: 'get_button') %>
+			</div>
+			<% end %>
+		</center>
+	</div>
+	
+	<div id="stats">
+		<div class="row">
+			<div class="col-md-6">
+				<h4> <b>Average Salary :</b> <%= @average %></h4>
+			</div>
+			<div class="col-md-6">
+				<h4> <b>Average Performance :</b> 5.0 /10</h4>
+			</div>
+		</div>
+	</div>
+
+	<% if @employees.count > 0 %>
+	<center>
+		<div id="result">
+			<table class="table table-bordered">
+			  <tr>
+			  	<th>Id</th>
+			    <th>Name</th>
+			    <th>Salary</th>
+			    <th>Performance</th>
+			  </tr>
+
+			  <% @employees.each_with_index do |employee,index| %>
+			  <tr>
+			  	<td><%= index+1 %></td>
+			    <td><%= employee["ename"] %></td>
+			    <td><%= employee["salary"] %></td>
+			    <td><%= employee["performance"] %></td>
+			  </tr>
+			 <% end %>
+			</table>
+		</div>
+	</center>
+	<% end %>
+</div>

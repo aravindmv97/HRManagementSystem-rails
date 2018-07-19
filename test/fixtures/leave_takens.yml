@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  leave_type: MyString
+  days: 1
+  reason: MyText
+  employee_detail: one
+
+two:
+  leave_type: MyString
+  days: 1
+  reason: MyText
+  employee_detail: two

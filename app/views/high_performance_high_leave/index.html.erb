@@ -1,0 +1,38 @@
+<div class="container">
+	<div id="title">
+	  <center>
+	    <b><header>HR Management System</header></b>
+	  </center>
+	</div>
+	<br>
+	<div>
+		<center><h4>High performers with low attendance.</h4></center>
+	</div>
+
+	<div id="back">
+	  <%= link_to "Back", home_index_path(), class: 'back_button' %>
+	</div>
+
+	<% if @employees.count > 0 %>
+	<center>
+		<div id="result">
+			<table class="table table-bordered">
+			<tr>
+			  <th>Id</th>
+			  <th>Name</th>
+			  <th>Salary</th>
+			  <th>Leave Taken (No of days)</th>
+			</tr>
+	        <% @employees.each_with_index do |employee,index| %>
+		    <tr>
+		      <td><%= index+1 %></td>
+		      <td><%= employee["ename"] %></td>
+			  <td><%= employee["salary"] %></td>
+			  <td><%= employee["leave_taken"] %></td>
+			</tr>
+			<% end %>
+			</table>
+		</div>
+	</center>
+	<% end %>
+</div>

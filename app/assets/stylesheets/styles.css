@@ -1,0 +1,134 @@
+/*home*/
+
+ #title{
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #2e6da4;
+    align-content: center;
+    color: #2e6da4;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+
+  #links{
+    margin-top: 150px;
+    align-content: center;
+    border-radius: 7px;
+    text-decoration: none;
+    border: 1px #2e6da4;
+  }
+
+  .button {
+        text-decoration: none !important;
+        text-align: center;
+        color: black;
+        width: 130px;
+        background-color: white;
+        border: 1px solid #2e6da4;
+        width: 10%;
+        border-radius: 10px;
+        padding: 10px;
+    }  
+
+/*employee details*/
+
+    .search{
+       text-decoration: none !important;
+      border-radius: 5px;
+      width: 250px;
+      height: 30px;
+      padding: 2px;
+    }
+
+    .month{
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      padding: 2px;
+      background: white;
+    } 
+
+    .input{
+      display: inline;
+      width: 250px;
+    }
+
+    /*high paid*/
+
+  #content{
+    margin-top: 30px;
+  }
+
+  #title{
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #2e6da4;
+    align-content: center;
+    color: #2e6da4;
+    font-size: 30px;
+  }
+
+  #button{
+    margin-top: 50px;
+    text-decoration: none !important;
+  }
+
+  .back_button {
+        text-decoration: none !important;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        width: 130px;
+        background-color: white;
+        border: 1px solid #2e6da4;
+        width: 10%;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .get_button {
+        text-decoration: none !important;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        width: 80px;
+        height: 35px;
+        background-color: #FC783E;
+        border: 1px solid #FC783E;
+        width: 10%;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    #back{
+      text-decoration: none !important;
+      margin-top: 30px;
+    }
+
+    .search{
+      border-radius: 5px;
+      width: 250px;
+      height: 30px;
+      padding: 2px;
+
+    }
+
+     table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100px;
+  }
+
+  th, td {
+    width: 100px;
+      padding: 5px;
+      text-align: left;    
+  }
+
+  #result{
+    margin-top: 50px;
+  }
+
+  #stats{
+    margin-top: 50px;
+  }

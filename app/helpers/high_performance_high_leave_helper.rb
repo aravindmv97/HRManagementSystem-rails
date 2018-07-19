@@ -1,0 +1,2 @@
+module HighPerformanceHighLeaveHelper
+end

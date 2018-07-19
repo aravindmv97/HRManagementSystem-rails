@@ -1,0 +1,48 @@
+<div class="container">
+  <div id="title">
+    <center>
+      <b><header>HR Management System</header></b>
+    </center>
+  </div>
+
+  <div id="back">
+    <%= link_to "Back", home_index_path(), class: 'back_button' %>
+  </div>
+
+
+  <div>
+    <div id="content">
+      <center>
+        <div>
+        <%= form_tag("/high_paid", method: "get") do %>
+        <%= text_field_tag(:q, "", class: "input form-control", :placeholder => "Enter Limit")  %>
+       </div>
+        <%= submit_tag("Search", class: "get_button" ) %>
+        <% end %>
+      </center>
+    </div>
+
+    <% if @high_paid_employee.count > 0 %>
+    <center>
+      <div id="result">
+        <table class="table table-bordered">
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+              </tr>
+
+               <% @high_paid_employee.each_with_index do |employee,index| %>
+              <tr>
+                <td><%= index+1 %></td>
+                <td><%= employee["ename"] %></td>
+                <td><%= employee["salary"] %></td>
+              </tr>
+              <% end %>
+          </table>
+        </div>
+      </center>
+      <% end %>
+  </div>
+</div>
+

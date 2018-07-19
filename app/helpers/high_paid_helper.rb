@@ -1,0 +1,2 @@
+module HighPaidHelper
+end
